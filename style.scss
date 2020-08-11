@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+$subColor: #898989;
+
+.header {
+  display: grid;
+  grid-template-columns: .5fr 1fr .1fr .1fr .1fr .7fr;
+  min-height: 80px;
+  align-content: center;
+  text-transform: uppercase;
+
+  &-logo {
+    grid-column: 2/3;
+    color: #000;
+    font-size: 34px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &-form {
+    align-self: center;
+    cursor: pointer;
+  }
+
+  &-menu {
+    color: #000;
+    font-family: 'Aleo', serif;
+    font-size: 16px;
+    font-weight: 400;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  &-basket {
+    font-family: 'Aleo', serif;
+    font-size: 16px;
+    font-weight: 400;
+    align-self: center;
+    cursor: pointer;
+  }
+  &-contact {
+    align-self: center;
+  }
+  &-user {
+    font-family: 'Aleo', serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+
+    &__name {
+      cursor: pointer;
+      display: block;
+
+      &_dropdown {
+        display: none;
+        top: 34px;
+        left: -50px;
+        position: absolute;
+        width: 130px;
+        height: 125px;
+        box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.08);
+        background-color: #FFF;
+        opacity: 1;
+        z-index: 10;
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 0;
+          display: block;
+          position: relative;
+          z-index: 10;
+          border: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          margin-left: -10px;
+          left: 50%;
+          border-bottom: 10px solid salmon;
+          top: -10px;
+        }
+
+        .dropdown-item {
+          font-size: 14px;
+          font-weight: 400;
+          opacity: 1;
+          padding: 8px 15px;
+          text-decoration: none;
+          display: block;
+          text-align: center;
+          transition: .3s;
+
+          &:hover {
+            transition: .3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home {
+  display: grid;
+  height: 565px;
+  position: relative;
+  .slideshow-container {
+    max-width: 100%;
+    position: absolute;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    max-height: 100%;
+  }
+
+  .slideshow-inner {
+    position: relative;
+    z-index: -1;
+
+  }
+
+  .mySlides {
+    display: none;
+
+    &-img {
+      width: 100%;
+    }
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 25px;
+    left: 47.5%;
+    z-index: 5;
+  }
+
+  .dot {
+
+    border-radius: 10px;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    background-color: #bab8b2;
+    margin: 0 2px;
+    display: inline-block;
+    transition: background-color .6s ease;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #FFF;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+
+  &-text {
+    z-index: 3;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    &__title {
+      color: #ffffff;
+      font-family: "Abril Fatface";
+      font-size: 80px;
+      font-weight: 400;
+      letter-spacing: 4px;
+    }
+
+    &__buttons {
+      justify-self: center;
+
+    }
+
+    &__button {
+      cursor: pointer;
+      text-transform: uppercase;
+      border: none;
+      color: #FFF;
+      font-family: 'Aleo', serif;
+      width: 225px;
+      height: 50px;
+      background-color: #000000;
+      transition: all .3s;
+      &:hover {
+        transition: all .3s;
+        box-shadow: 5px 10px 18px #888888;
+      }
+    }
+  }
+}
+
+.cause {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1.5fr 1fr;
+  min-height: 600px;
+  align-content: center;
+  &-theme {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
+    position: relative;
+    &__title {
+      grid-column: 1/2;
+      position: absolute;
+      display: grid;
+      justify-self: end;
+      margin-bottom: 50px;
+      align-self: center;
+      z-index: 3;
+      &_text {
+        color: #000000;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  &-container {
+    grid-column: 4/5;
+    display: grid;
+    grid-gap: 5px;
+    &__text {
+      &_title {
+        color: #000;
+        font-family: Aleo;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &_desc {
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 16px;
+        color: $subColor;
+      }
+    }
+  }
+}
+
+.store {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr 1fr;
+  grid-template-rows: .3fr 1fr;
+  height: 617px;
+  background-color: #f8f8f8;
+  &-title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-family: "Abril";
+    font-size: 36px;
+    font-weight: 400;
+    &__subtitle {
+      margin-left: 40px;
+    }
+  }
+
+  &-containers {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    &__block {
+      display: grid;
+      grid-template-columns: .1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 15px;
+
+
+      &_img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: end;
+      }
+      &_title {
+        grid-column: 2/3;
+        font-family: Aleo;
+        grid-row: 1/2;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &_subtext {
+        color: $subColor;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        width: 80%;
+      }
+    }
+  }
+}
+
+.how {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr 1fr;
+  grid-template-rows: 1fr 1fr .6fr;
+
+  &-title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: end;
+    &__text {
+      color: #000000;
+      font-size: 36px;
+      font-weight: 400;
+    }
+  }
+  &-containers {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    &__block {
+      display: grid;
+      grid-template-columns: .2fr 1fr;
+      grid-template-rows: .5fr 1fr;
+      grid-column-gap: 10px;
+      &_num {
+      align-self: center;
+      justify-self: start;
+        color: #000000;
+        font-family: "Abril Fatface";
+        font-size: 40px;
+        font-weight: 400;
+      }
+      &_title {
+        color: #000000;
+        font-family: Aleo;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &_text {
+        width: 70%;
+        grid-column: 2/3;
+        align-self: start;
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 16px;
+        color: $subColor;
+      }
+    }
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: .6fr 1fr .4fr;
+  height: 714px;
+  background-color: #f8f8f8;
+
+  &-theme {
+    grid-column: 1/2;
+  }
+  &-theme2 {
+    grid-column: 3/4;
+    overflow: hidden;
+  }
+  &-block {
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 714px;
+    z-index: 1;
+    justify-self:center;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: .7fr .2fr .6fr 1fr .7fr;
+    text-align: center;
+    grid-gap: 10px;
+    &__title {
+      grid-row: 2/3;
+      font-family: Aleo;
+      font-size: 24px;
+      font-weight: 300;
+    }
+    &__subtitle {
+      grid-row: 3/4;
+      align-self: center;
+      color: #000000;
+      font-family: "Abril Fatface";
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    &__text {
+      justify-self: center;
+      width: 75%;
+      grid-row: 4/5;
+      color: $subColor;
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr 1fr;
+  grid-template-rows: .3fr 1fr;
+
+  &-title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+    color: #000000;
+    font-size: 38px;
+    font-weight: 400;
+  }
+
+  &-containers {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+    &__block {
+      display: grid;
+      grid-template-rows: .1fr .1fr 1fr .3fr;
+      text-align: center;
+      &_img {
+        justify-self: center;
+      }
+      &_name {
+        color: #000000;
+        font-family: Aleo;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &_text {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        color: $subColor;
+      }
+      &_position {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        color: $subColor;
+        font-weight: 400;
+        font-size: 17px;
+        align-self: end;
+      }
+      &_point {
+        color: black;
+        font-family: "Abril Fatface";
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 26px;
+        align-self: center;
+      }
+    }
+  }
+}
+
+.apply {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 650px;
+  background-color: #f8f8f8;
+  &-container {
+    width: 880px;
+    display: grid;
+    grid-template-rows: 1.2fr 1fr .8fr .5fr 1fr;
+    text-align: center;
+    grid-template-columns: 1fr 3fr;
+    &__title {
+      align-self: end;
+      justify-self: center;
+      grid-row: 1/3;
+      grid-column: 2/3;
+      font-family: "Abril Fatface";
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    &__text {
+      align-self: start;
+      width: 50%;
+      justify-self: center;
+      grid-row: 3/4;
+      grid-column: 2/3;
+      font-family: "Roboto";
+      font-weight: 300;
+      letter-spacing: 0.45px;
+      color: $subColor;
+      font-size: 17px;
+    }
+    &__block {
+      align-self: start;
+      justify-self: center;
+      grid-row: 4/5;
+      grid-column: 2/3;
+      &_button {
+        width: 225px;
+        height: 50px;
+        background-color: #000000;
+        color: #FFF;
+        text-transform: uppercase;
+        border: none;
+        font-family: Aleo;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.7px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+          transition: all .3s;
+          box-shadow: 5px 10px 18px #888888;
+        }
+      }
+    }
+  }
+  &-theme {
+    overflow: hidden;
+  }
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 3fr 1fr;
+  min-height: 105px;
+  align-content: center;
+  &-block {
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: 1fr 1fr 1fr;
+    &__link {
+      justify-self: start;
+      color: #000000;
+      font-family: Aleo;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 15px;
+      text-decoration: none;
+      &:hover {
+        border-bottom: 1px solid $subColor;
+      }
+    }
+  }
+  &-item {
+    grid-column: 3/4;
+    justify-self: end;
+    align-self: center;
+    &__button {
+      font-family: Aleo;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      width: 165px;
+      height: 43px;
+      color: #000000;
+      background-color: #FFFFFF;
+      border: 1px solid #bab8b2;
+      cursor: pointer;
+      transition: all .3s;
+      &:hover {
+        transition: all .3s;
+        box-shadow: 5px 10px 18px #888888;
+      }
+    }
+  }
+}

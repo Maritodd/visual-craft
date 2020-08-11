@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body class="body">
+<div class="container">
+    <header class="header">
+        <a href="#" class="header-logo">
+            <span class="header-logo__text">test</span>
+        </a>
+        <form class="header-form">
+            <img src="images/SEARCH.png" alt="search"/>
+        </form>
+        <a class="header-menu">menu</a>
+        <a class="header-basket"><img src="images/basket.png" alt="basket"/> 1</a>
+        <div class="header-contact">
+            <div class="header-user">
+                <span class="header-user__name"><img src="images/user.png" alt="user"/>alex</span>
+                <div class="header-user__name_dropdown">
+                    <a class="dropdown-item">Settings</a>
+                    <a class="dropdown-item">Log out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <div class="slideshow-container">
+            <div class="slideshow-inner">
+                <div class="mySlides fade">
+                    <img class="mySlides-img" src='images/slider1.png' alt="theme"/>
+                </div>
+                <div class="mySlides fade">
+                    <img class="mySlides-img" src='images/slider2.jpg' alt="theme"/>
+                </div>
+                <div class="mySlides fade">
+                    <img class="mySlides-img" src='images/slider3.jpg' alt="theme"/>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick='currentSlide(1)'></span>
+                <span class="dot" onclick='currentSlide(2)'></span>
+                <span class="dot" onclick='currentSlide(3)'></span>
+            </div>
+        </div>
+        <div class="home-text">
+            <h1 class="home-text__title">Launching Soon</h1>
+            <div class="home-text__buttons">
+                <button class="home-text__button">register interest</button>
+            </div>
+        </div>
+    </section>
+    <section class="cause">
+        <div class="cause-theme">
+            <div class="cause-theme__block">
+                <img src="images/whyme.png" alt="theme"/>
+            </div>
+            <div class="cause-theme__title">
+                <span class="cause-theme__title_text">Why use <br/> Test</span>
+            </div>
+        </div>
+        <div class="cause-container">
+            <div class="cause-container__text">
+                <h4 class="cause-container__text_title">Tableware</h4>
+                <span class="cause-container__text_desc">Browse exciting products from a selection of quality makers, all in one place</span>
+            </div>
+            <div class="cause-container__text">
+                <h4 class="cause-container__text_title">Products Just For You</h4>
+                <span class="cause-container__text_desc">Our technology will do all the hard work &  recommend products that fit well with  your customer profile, based on what your competition is doing.</span>
+            </div>
+            <div class="cause-container__text">
+                <h4 class="cause-container__text_title">Test It In Your Store</h4>
+                <span class="cause-container__text_desc">Our test & return feature will make it easy for you to find that bestseller, delight your customers & keep them coming back for more </span>
+            </div>
+        </div>
+    </section>
+    <section class="store">
+        <div class="store-title">
+            <h2 class="store-title__text">
+                Buying for your store<br/>
+                <span class="store-title__subtitle">has never been easier</span>
+            </h2>
+        </div>
+        <div class="store-containers">
+            <div class="store-containers__block">
+                <img class="store-containers__block_img" src="images/lock.png" alt="svg"/>
+                <h4 class="store-containers__block_title">Free For Retailers</h4>
+                <span class="store-containers__block_subtext">Sparkinity is completely free for retailers. No markups or fees</span>
+            </div>
+            <div class="store-containers__block">
+                <img class="store-containers__block_img" src="images/star.png" alt="svg"/>
+                <h4 class="store-containers__block_title">Maker Stories & Reviews</h4>
+                <span class="store-containers__block_subtext">In depth profiles on makers, see who you are buying from and how they rate</span>
+            </div>
+            <div class="store-containers__block">
+                <img class="store-containers__block_img" src="images/arrow.png" alt="svg"/>
+                <h4 class="store-containers__block_title">Easy Returns</h4>
+                <span class="store-containers__block_subtext">Send back any products that don’t sell within 90 days</span>
+            </div>
+            <div class="store-containers__block">
+                <img class="store-containers__block_img" src="images/pieceofcake.png" alt="svg"/>
+                <h4 class="store-containers__block_title">Sector Trends</h4>
+                <span class="store-containers__block_subtext">Reporting and data analytics on trends in your business sector</span>
+            </div>
+            <div class="store-containers__block">
+                <img class="store-containers__block_img" src="images/tick.png" alt="svg"/>
+                <h4 class="store-containers__block_title">Low Minimums</h4>
+                <span class="store-containers__block_subtext">Low opening order minimums for most makers</span>
+            </div>
+            <div class="store-containers__block">
+                <img class="store-containers__block_img" src="images/bottlewithship.png" alt="svg"/>
+                <h4 class="store-containers__block_title">Unique Products</h4>
+                <span class="store-containers__block_subtext">A variety of products from talented and quality Makers</span>
+            </div>
+        </div>
+    </section>
+    <section class="how">
+        <div class="how-title">
+            <h2 class="how-title__text">How Test works</h2>
+        </div>
+        <div class="how-containers">
+            <div class="how-containers__block">
+                <span class="how-containers__block_num">01</span>
+                <h4 class="how-containers__block_title">Select & Order</h4>
+                <span class="how-containers__block_text">Select products from a wide variety of talented & quality Makers and place your order</span>
+            </div>
+            <div class="how-containers__block">
+                <span class="how-containers__block_num">02</span>
+                <h4 class="how-containers__block_title">Deliverd To Your Store</h4>
+                <span class="how-containers__block_text">Items typically ship to your store from Makers within 48 hours of your order</span>
+            </div>
+            <div class="how-containers__block">
+                <span class="how-containers__block_num">03</span>
+                <h4 class="how-containers__block_title">Test & Return</h4>
+                <span class="how-containers__block_text">Test your selections with customers, you have 90 days to return it if it doesn't sell</span>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-theme">
+            <img src="images/about.png" alt="aboutus"/>
+        </div>
+        <div class="about-block">
+            <span class="about-block__title">About Us</span>
+            <span class="about-block__subtitle">We believe that<br/>
+            small can be big</span>
+            <span class="about-block__text">Sparkinity was born because we believe in innovation. Data shows that small stores are better positioned than ever to take on retail giants as consumers  increasingly seek curation and a personalised touch. Agility is a powerful weapon and we seek to empower the agile.
+            <br/><br/>But to fulfil our vision we need to disrupt the age old system of distribution & wholesale. Our founding team has personal experiences & understanding  of the  expenses incurred , time and incredible effort that both buyers  & makers  make  to connect. All because of the need to get a physical glimpse of that  unicorn called the bestseller before risking an order.
+            <br/><br/>​We are changing  the buying process by providing retailers a medium to order online with free returns. Makers save on huge upfront costs for creating distribution networks  &  store owners can easily let their customers decide without taking on the risks involved with buying decisions.</span>
+        </div>
+        <div class="about-theme2">
+            <img src="images/us.png" alt="aboutus"/>
+        </div>
+    </section>
+    <section class="review">
+        <span class="review-title">How Test works</span>
+        <div class="review-containers">
+            <div class="review-containers__block">
+                <img class="review-containers__block_img" src="images/1.png" alt=""/>
+                <h4 class="review-containers__block_name">Joanna Booth</h4>
+                <span class="review-containers__block_text">Looking  forward to working with the Sparkinity team as they really understand the pressures of buying, I am looking for new products everyday and can't wait to try out their market test feature
+                    <br/><br/><span
+                            class="review-containers__block_position">Owner of Space  London</span><br/><br/><br/><br/><span
+                            class="review-containers__block_point">"</span></span>
+
+            </div>
+            <div class="review-containers__block">
+                <img class="review-containers__block_img" src="images/3.png" alt=""/>
+                <h4 class="review-containers__block_name">Ryan Finer</h4>
+                <span class="review-containers__block_text">As a small store we are constantly on our toes to delight our customers and keep them coming back for more. Its a very competitive market and finding unique products that work with our brand values & price architecture is hard. Sparkinity seems like a promising & valuable concep
+                    <br/><br/><span
+                            class="review-containers__block_position">Owner of Workshop</span><br/><br/><br/><br/><span
+                            class="review-containers__block_point">"</span></span>
+            </div>
+            <div class="review-containers__block">
+                <img class="review-containers__block_img" src="images/2.png" alt=""/>
+                <h4 class="review-containers__block_name">Chloe Smith</h4>
+                <span class="review-containers__block_text">Having launched my home decor brand last year, I have been struggling with trade fairs and connecting with buyers as its so expensive and time consuming. Sparkinity is an amazing concept. I have been waiting for this for a long time
+                    <br/><br/><span
+                            class="review-containers__block_position">Maker of ceramics</span><br/><br/><br/><br/><span
+                            class="review-containers__block_point">"</span></span>
+            </div>
+        </div>
+    </section>
+    <section class="apply">
+        <div class="apply-container">
+            <h2 class="apply-container__title">Apply to join the <br/> community</h2>
+            <span class="apply-container__text">We are here to make a difference !
+                So whether you are a talented Maker or a Retailer  drop us a line to join our platform. We would love to hear from you</span>
+            <div class="apply-container__block">
+                <button class="apply-container__block_button">register interest</button>
+            </div>
+        </div>
+        <div class="apply-theme">
+            <img class="apply-theme__img" src="images/7.png" alt="theme"/>
+        </div>
+    </section>
+    <section class="navbar">
+        <div class="navbar-block">
+            <a href="#" class="navbar-block__link">Home</a>
+            <a href="#" class="navbar-block__link">About us</a>
+            <a href="#" class="navbar-block__link">Team</a>
+        </div>
+        <div class="navbar-item">
+            <button class="navbar-item__button">Contact</button>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="#" class="footer-logo__block">
+                <span class="footer-logo__block_item">test</span>
+            </a>
+        </div>
+        <div class="footer-rights">
+            <span class="footer-rights">Terms & Condition</span>
+            <span class="footer-rights">Privacy policy</span>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
