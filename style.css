@@ -552,4 +552,35 @@
   box-shadow: 5px 10px 18px #888888;
 }
 
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2.45fr 2fr 0.8fr;
+  height: 90px;
+  background-color: #ffffff;
+  border: 1px solid #bab8b2;
+}
+.footer-logo {
+  grid-column: 2/3;
+  align-self: center;
+}
+.footer-logo__block {
+  color: #000000;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.footer-rights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 3/4;
+  align-self: center;
+  justify-self: end;
+  grid-column-gap: 50px;
+  color: #898989;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
 /*# sourceMappingURL=style.css.map */

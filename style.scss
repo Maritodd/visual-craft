@@ -588,3 +588,36 @@ $subColor: #898989;
     }
   }
 }
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2.45fr 2fr .8fr;
+  height: 90px;
+  background-color: #ffffff;
+  border: 1px solid #bab8b2;
+  &-logo {
+    grid-column: 2/3;
+    align-self: center;
+    &__block {
+      color: #000000;
+      font-size: 34px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  &-rights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 3/4;
+    align-self: center;
+    justify-self: end;
+    grid-column-gap: 50px;
+    color: $subColor;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+}
