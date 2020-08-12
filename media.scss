@@ -13,6 +13,7 @@
   .about {
     &-theme {
       grid-column: 1/2;
+      overflow: hidden;
     }
 
     &-theme2 {

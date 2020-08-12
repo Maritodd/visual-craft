@@ -634,6 +634,7 @@
 
   .about-theme {
     grid-column: 1/2;
+    overflow: hidden;
   }
   .about-theme2 {
     grid-column: 3/4;
