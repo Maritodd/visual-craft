@@ -22,87 +22,107 @@ $subColor: #898989;
 
   &-logo {
     grid-column: 2/3;
-    color: #000;
-    font-size: 34px;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
+
+    &__text {
+      color: #000;
+      font-size: 34px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 
   &-form {
     align-self: center;
-    cursor: pointer;
+    &__search {
+      cursor: pointer;
+    }
   }
 
   &-menu {
-    color: #000;
-    font-family: 'Aleo', serif;
-    font-size: 16px;
-    font-weight: 400;
     align-self: center;
-    cursor: pointer;
+
+    &__item {
+      font-family: 'Aleo', serif;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid $subColor;
+      }
+    }
   }
 
   &-basket {
-    font-family: 'Aleo', serif;
-    font-size: 16px;
-    font-weight: 400;
     align-self: center;
     cursor: pointer;
+    justify-self: center;
+
+    &__number {
+      font-family: 'Aleo', serif;
+      font-size: 13px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #000;
+
+      &_item {
+        margin-left: 7px;
+      }
+    }
   }
+
   &-contact {
     align-self: center;
   }
+
   &-user {
-    font-family: 'Aleo', serif;
-    font-size: 16px;
-    font-weight: 400;
     position: relative;
+    display: inline-block;
+    &__img {
+      margin-right: 10px;
+    }
+
+    &:hover .header-user__name_dropdown{
+      display: block;
+    }
 
     &__name {
       cursor: pointer;
       display: block;
+      margin-left: 10px;
+      font-family: 'Aleo', serif;
+      font-size: 16px;
+      font-weight: 400;
 
       &_dropdown {
         display: none;
-        top: 34px;
-        left: -50px;
         position: absolute;
-        width: 130px;
-        height: 125px;
-        box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.08);
         background-color: #FFF;
-        opacity: 1;
-        z-index: 10;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
 
-        &::after {
-          content: '';
-          width: 0;
-          height: 0;
-          display: block;
-          position: relative;
-          z-index: 10;
-          border: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          margin-left: -10px;
-          left: 50%;
-          border-bottom: 10px solid salmon;
-          top: -10px;
+        &:hover {
+
         }
 
         .dropdown-item {
+          text-transform: none;
+          cursor: pointer;
+          display: block;
           font-size: 14px;
-          font-weight: 400;
+          font-family: "Aleo - Light";
+          font-weight: 300;
           opacity: 1;
+          color: #000;
           padding: 8px 15px;
           text-decoration: none;
-          display: block;
           text-align: center;
-          transition: .3s;
-
           &:hover {
-            transition: .3s;
+            background-color: #ddd;
           }
         }
       }
@@ -114,6 +134,8 @@ $subColor: #898989;
   display: grid;
   height: 565px;
   position: relative;
+  grid-template-columns: 1fr 1fr;
+
   .slideshow-container {
     max-width: 100%;
     position: absolute;
@@ -177,8 +199,9 @@ $subColor: #898989;
   &-text {
     z-index: 3;
     display: grid;
-    justify-content: center;
-    align-content: center;
+    align-self: center;
+    grid-column: 1/4;
+    justify-self: center;
 
     &__title {
       color: #ffffff;
@@ -203,9 +226,35 @@ $subColor: #898989;
       height: 50px;
       background-color: #000000;
       transition: all .3s;
+
       &:hover {
         transition: all .3s;
         box-shadow: 5px 10px 18px #888888;
+      }
+    }
+  }
+
+  &-sidenav {
+    display: grid;
+    grid-column: 1/3;
+    position: fixed;
+    justify-self: end;
+    align-self: center;
+    margin-right: 40px;
+    grid-gap: 5px;
+   -webkit-align-self: center;
+    -webkit-justify-self: end;
+    &__link {
+
+      text-decoration: none;
+      color: #000;
+      padding: 5px;
+      font-family: "Abril Fatface";
+      font-size: 14px;
+      font-weight: 400;
+
+      &:hover {
+        border: 1px solid #000000;
       }
     }
   }
@@ -216,11 +265,13 @@ $subColor: #898989;
   grid-template-columns: 1fr 2fr 1fr 1.5fr 1fr;
   min-height: 600px;
   align-content: center;
+
   &-theme {
     grid-column: 2/4;
     display: grid;
     grid-template-columns: 1.5fr .5fr;
     position: relative;
+
     &__title {
       grid-column: 1/2;
       position: absolute;
@@ -229,6 +280,7 @@ $subColor: #898989;
       margin-bottom: 50px;
       align-self: center;
       z-index: 3;
+
       &_text {
         color: #000000;
         font-size: 40px;
@@ -237,10 +289,12 @@ $subColor: #898989;
       }
     }
   }
+
   &-container {
     grid-column: 4/5;
     display: grid;
     grid-gap: 5px;
+
     &__text {
       &_title {
         color: #000;
@@ -248,6 +302,7 @@ $subColor: #898989;
         font-size: 18px;
         font-weight: 700;
       }
+
       &_desc {
         font-family: "Roboto";
         font-weight: 300;
@@ -264,12 +319,14 @@ $subColor: #898989;
   grid-template-rows: .3fr 1fr;
   height: 617px;
   background-color: #f8f8f8;
+
   &-title {
     grid-column: 2/3;
     grid-row: 1/2;
     font-family: "Abril";
     font-size: 36px;
     font-weight: 400;
+
     &__subtitle {
       margin-left: 40px;
     }
@@ -295,6 +352,7 @@ $subColor: #898989;
         grid-row: 1/2;
         align-self: end;
       }
+
       &_title {
         grid-column: 2/3;
         font-family: Aleo;
@@ -302,6 +360,7 @@ $subColor: #898989;
         font-size: 18px;
         font-weight: 700;
       }
+
       &_subtext {
         color: $subColor;
         font-family: Roboto;
@@ -324,36 +383,42 @@ $subColor: #898989;
     grid-column: 2/3;
     grid-row: 1/2;
     align-self: end;
+
     &__text {
       color: #000000;
       font-size: 36px;
       font-weight: 400;
     }
   }
+
   &-containers {
     grid-column: 2/3;
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     &__block {
       display: grid;
       grid-template-columns: .2fr 1fr;
       grid-template-rows: .5fr 1fr;
       grid-column-gap: 10px;
+
       &_num {
-      align-self: center;
-      justify-self: start;
+        align-self: center;
+        justify-self: start;
         color: #000000;
         font-family: "Abril Fatface";
         font-size: 40px;
         font-weight: 400;
       }
+
       &_title {
         color: #000000;
         font-family: Aleo;
         font-size: 18px;
         font-weight: 700;
       }
+
       &_text {
         width: 70%;
         grid-column: 2/3;
@@ -376,27 +441,31 @@ $subColor: #898989;
   &-theme {
     grid-column: 1/2;
   }
+
   &-theme2 {
     grid-column: 3/4;
     overflow: hidden;
   }
+
   &-block {
     background-color: #f8f8f8;
     width: 100%;
     height: 714px;
     z-index: 1;
-    justify-self:center;
+    justify-self: center;
     grid-column: 2/3;
     display: grid;
     grid-template-rows: .7fr .2fr .6fr 1fr .7fr;
     text-align: center;
     grid-gap: 10px;
+
     &__title {
       grid-row: 2/3;
       font-family: Aleo;
       font-size: 24px;
       font-weight: 300;
     }
+
     &__subtitle {
       grid-row: 3/4;
       align-self: center;
@@ -406,6 +475,7 @@ $subColor: #898989;
       font-weight: 400;
       letter-spacing: 1px;
     }
+
     &__text {
       justify-self: center;
       width: 75%;
@@ -423,6 +493,14 @@ $subColor: #898989;
   grid-template-columns: 1fr 4.5fr 1fr;
   grid-template-rows: .3fr 1fr;
 
+  .slideshow {
+    position: relative;
+  }
+
+  .mySlide {
+    display: none;
+  }
+
   &-title {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -439,25 +517,30 @@ $subColor: #898989;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 100px;
+
     &__block {
       display: grid;
       grid-template-rows: .1fr .1fr 1fr .3fr;
       text-align: center;
+
       &_img {
         justify-self: center;
       }
+
       &_name {
         color: #000000;
         font-family: Aleo;
         font-size: 18px;
         font-weight: 700;
       }
+
       &_text {
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         font-size: 17px;
         color: $subColor;
       }
+
       &_position {
         font-family: 'Roboto', sans-serif;
         font-style: italic;
@@ -466,6 +549,7 @@ $subColor: #898989;
         font-size: 17px;
         align-self: end;
       }
+
       &_point {
         color: black;
         font-family: "Abril Fatface";
@@ -483,12 +567,14 @@ $subColor: #898989;
   grid-template-columns: 1fr 1fr;
   height: 650px;
   background-color: #f8f8f8;
+
   &-container {
     width: 880px;
     display: grid;
     grid-template-rows: 1.2fr 1fr .8fr .5fr 1fr;
     text-align: center;
     grid-template-columns: 1fr 3fr;
+
     &__title {
       align-self: end;
       justify-self: center;
@@ -499,6 +585,7 @@ $subColor: #898989;
       font-weight: 400;
       letter-spacing: 1px;
     }
+
     &__text {
       align-self: start;
       width: 50%;
@@ -511,11 +598,13 @@ $subColor: #898989;
       color: $subColor;
       font-size: 17px;
     }
+
     &__block {
       align-self: start;
       justify-self: center;
       grid-row: 4/5;
       grid-column: 2/3;
+
       &_button {
         width: 225px;
         height: 50px;
@@ -529,6 +618,7 @@ $subColor: #898989;
         letter-spacing: 0.7px;
         cursor: pointer;
         transition: all .3s;
+
         &:hover {
           transition: all .3s;
           box-shadow: 5px 10px 18px #888888;
@@ -536,6 +626,7 @@ $subColor: #898989;
       }
     }
   }
+
   &-theme {
     overflow: hidden;
   }
@@ -546,10 +637,12 @@ $subColor: #898989;
   grid-template-columns: 1fr 1.5fr 3fr 1fr;
   min-height: 105px;
   align-content: center;
+
   &-block {
     display: grid;
     grid-column: 2/3;
     grid-template-columns: 1fr 1fr 1fr;
+
     &__link {
       justify-self: start;
       color: #000000;
@@ -560,15 +653,18 @@ $subColor: #898989;
       cursor: pointer;
       padding: 15px;
       text-decoration: none;
+
       &:hover {
         border-bottom: 1px solid $subColor;
       }
     }
   }
+
   &-item {
     grid-column: 3/4;
     justify-self: end;
     align-self: center;
+
     &__button {
       font-family: Aleo;
       font-size: 12px;
@@ -581,6 +677,7 @@ $subColor: #898989;
       border: 1px solid #bab8b2;
       cursor: pointer;
       transition: all .3s;
+
       &:hover {
         transition: all .3s;
         box-shadow: 5px 10px 18px #888888;
@@ -595,9 +692,11 @@ $subColor: #898989;
   height: 90px;
   background-color: #ffffff;
   border: 1px solid #bab8b2;
+
   &-logo {
     grid-column: 2/3;
     align-self: center;
+
     &__block {
       color: #000000;
       font-size: 34px;
@@ -614,10 +713,16 @@ $subColor: #898989;
     align-self: center;
     justify-self: end;
     grid-column-gap: 50px;
-    color: $subColor;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-  }
 
+    &__item {
+      text-decoration: none;
+      color: $subColor;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
 }
+
+@import 'media.scss';
+

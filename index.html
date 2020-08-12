@@ -9,25 +9,30 @@
 <body class="body">
 <div class="container">
     <header class="header">
-        <a href="#" class="header-logo">
-            <span class="header-logo__text">test</span>
-        </a>
-        <form class="header-form">
-            <img src="images/SEARCH.png" alt="search"/>
-        </form>
-        <a class="header-menu">menu</a>
-        <a class="header-basket"><img src="images/basket.png" alt="basket"/> 1</a>
+        <div class="header-logo">
+            <a href="#" class="header-logo__text">test</a>
+        </div>
+        <div class="header-form">
+            <img class="header-form__search" src="images/SEARCH.png" alt="search"/>
+        </div>
+        <div class="header-menu">
+            <a href="#" class="header-menu__item">menu</a>
+        </div>
+        <div class="header-basket">
+            <a class="header-basket__number" href="#"><img class="header-basket__img" src="images/basket.png" alt="basket"/><span
+                    class="header-basket__number_item">1</span></a>
+        </div>
         <div class="header-contact">
             <div class="header-user">
-                <span class="header-user__name"><img src="images/user.png" alt="user"/>alex</span>
+                <span class="header-user__name"><img class="header-user__img" src="images/user.png" alt="user"/>alex</span>
                 <div class="header-user__name_dropdown">
-                    <a class="dropdown-item">Settings</a>
-                    <a class="dropdown-item">Log out</a>
+                    <a href="#" class="dropdown-item">Settings</a>
+                    <a href="#" class="dropdown-item">Log out</a>
                 </div>
             </div>
         </div>
     </header>
-    <section class="home">
+    <section class="home" id="1">
         <div class="slideshow-container">
             <div class="slideshow-inner">
                 <div class="mySlides fade">
@@ -52,8 +57,17 @@
                 <button class="home-text__button">register interest</button>
             </div>
         </div>
+        <div class="home-sidenav">
+            <a class="home-sidenav__link" href="#1">01</a>
+            <a class="home-sidenav__link" href="#2">02</a>
+            <a class="home-sidenav__link" href="#3">03</a>
+            <a class="home-sidenav__link" href="#4">04</a>
+            <a class="home-sidenav__link" href="#5">05</a>
+            <a class="home-sidenav__link" href="#6">06</a>
+            <a class="home-sidenav__link" href="#7">07</a>
+        </div>
     </section>
-    <section class="cause">
+    <section class="cause" id="2">
         <div class="cause-theme">
             <div class="cause-theme__block">
                 <img src="images/whyme.png" alt="theme"/>
@@ -77,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section class="store">
+    <section class="store" id="3">
         <div class="store-title">
             <h2 class="store-title__text">
                 Buying for your store<br/>
@@ -117,7 +131,7 @@
             </div>
         </div>
     </section>
-    <section class="how">
+    <section class="how" id="4">
         <div class="how-title">
             <h2 class="how-title__text">How Test works</h2>
         </div>
@@ -139,7 +153,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="5">
         <div class="about-theme">
             <img src="images/about.png" alt="aboutus"/>
         </div>
@@ -155,9 +169,9 @@
             <img src="images/us.png" alt="aboutus"/>
         </div>
     </section>
-    <section class="review">
+    <section class="review" id="6">
         <span class="review-title">How Test works</span>
-        <div class="review-containers">
+        <div class="review-containers slideshow-inner">
             <div class="review-containers__block">
                 <img class="review-containers__block_img" src="images/1.png" alt=""/>
                 <h4 class="review-containers__block_name">Joanna Booth</h4>
@@ -185,7 +199,7 @@
             </div>
         </div>
     </section>
-    <section class="apply">
+    <section class="apply" id="7">
         <div class="apply-container">
             <h2 class="apply-container__title">Apply to join the <br/> community</h2>
             <span class="apply-container__text">We are here to make a difference !
@@ -215,8 +229,8 @@
             </a>
         </div>
         <div class="footer-rights">
-            <span class="footer-rights__item">Terms & Condition</span>
-            <span class="footer-rights__item">Privacy policy</span>
+            <a href="#" class="footer-rights__item">Terms & Condition</a>
+            <a href="#" class="footer-rights__item">Privacy policy</a>
         </div>
     </footer>
 </div>
