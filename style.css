@@ -647,8 +647,31 @@
   }
   .about-block__text {
     justify-self: center;
-    width: 100%;
+    width: 80%;
     grid-row: 4/5;
+  }
+
+  .cause-theme {
+    grid-column: 2/4;
+    z-index: -1;
+  }
+  .cause-theme__title {
+    justify-self: end;
+  }
+  .cause-container {
+    grid-column: 4/6;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .cause-theme {
+    grid-column: 1/4;
+  }
+
+  .apply-container {
+    width: 650px;
+  }
+  .apply-container__block {
+    align-self: end;
   }
 }
 
