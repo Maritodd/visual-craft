@@ -1,0 +1,35 @@
+@media screen and (max-width: 1420px) {
+  .home {
+    &-text {
+      align-self: start;
+      justify-self: center;
+
+      &__title {
+        font-size: 70px;
+      }
+    }
+  }
+
+  .about {
+    &-theme {
+      grid-column: 1/2;
+    }
+
+    &-theme2 {
+      grid-column: 3/4;
+      overflow: hidden;
+    }
+
+    &-block {
+      width: 100%;
+      justify-self: start;
+      grid-column: 2/3;
+
+      &__text {
+        justify-self: center;
+        width: 100%;
+        grid-row: 4/5;
+      }
+    }
+  }
+}
