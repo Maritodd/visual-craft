@@ -204,7 +204,6 @@
   margin-right: 40px;
   grid-gap: 5px;
   -webkit-align-self: center;
-  -webkit-justify-self: end;
 }
 .home-sidenav__link {
   text-decoration: none;
